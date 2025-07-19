@@ -24,7 +24,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with: 
           access-key-id: ${{ vars.AWS_ACCESS_KEY_ID }}
-          secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+          secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY_ID }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Setup Terraform
