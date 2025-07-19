@@ -1,11 +1,11 @@
-#module "vpc" {
-#  source = "./modules/vpc"
-#  
-#  project_name       = var.project_name
-#  environment        = var.environment
-#  vpc_cidr          = var.vpc_cidr
-#  availability_zones = var.availability_zones
-#}
+module "vpc" {
+  source = "./modules/vpc"
+  
+  project_name       = var.project_name
+  environment        = var.environment
+  vpc_cidr          = var.vpc_cidr
+  availability_zones = var.availability_zones
+}
 
 module "iam" {
   source = "./modules/iam"
@@ -31,32 +31,13 @@ module "alb" {
   security_groups = [module.vpc.alb_security_group_id]
 }
 
-#module "ecs" {
-#  source = "./modules/ecs"
-#  
-#  project_name             = var.project_name
-#  environment              = var.environment
-#  vpc_id                   = module.vpc.vpc_id
-#  private_subnets          = module.vpc.private_subnets
-#  ecs_security_group_id    = module.vpc.ecs_security_group_id
-#  task_execution_role_arn  = module.iam.ecs_task_execution_role_arn
-#  task_role_arn           = module.iam.ecs_task_role_arn
-#  ecr_patient_repo_url    = module.ecr.patient_service_repository_url
-#  ecr_appointment_repo_url = module.ecr.appointment_service_repository_url
-#  target_group_arns       = module.alb.target_group_arns
-#  container_cpu           = var.container_cpu
-#  container_memory        = var.container_memory
-#  app_port               = var.app_port
-#  desired_capacity       = var.desired_capacity
-#}
-
 module "ecs" {
   source = "./modules/ecs"
   
   project_name             = var.project_name
   environment              = var.environment
-  vpc_id                   = "vpc-0238b29735964f29b"
-  private_subnets          = ["10.10.10.0/24", "10.10.11.0/24"]
+  vpc_id                   = module.vpc.vpc_id
+  private_subnets          = module.vpc.private_subnets
   ecs_security_group_id    = module.vpc.ecs_security_group_id
   task_execution_role_arn  = module.iam.ecs_task_execution_role_arn
   task_role_arn           = module.iam.ecs_task_role_arn
