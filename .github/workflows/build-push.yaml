@@ -9,13 +9,9 @@ on:
     paths: ['microservices/**']
   workflow_dispatch:
 
-permissions:
-  id-token:   write
-  contents:   write     
-  pull-requests: write
 
 env:
-  AWS_REGION: ap-south-1
+  AWS_REGION: us-west-1
 
 jobs:
   detect-changes:
@@ -49,10 +45,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Configure AWS credentials using OIDC
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+        with: 
+          access-key-id: ${{ vars.AWS_ACCESS_KEY_ID }}
+          secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to Amazon ECR
@@ -81,10 +78,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Configure AWS credentials using OIDC
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+        with: 
+          access-key-id: ${{ vars.AWS_ACCESS_KEY_ID }}
+          secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to Amazon ECR
@@ -113,10 +111,11 @@ jobs:
       name: production
     
     steps:
-      - name: Configure AWS credentials using OIDC
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+        with: 
+          access-key-id: ${{ vars.AWS_ACCESS_KEY_ID }}
+          secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Update Patient Service
