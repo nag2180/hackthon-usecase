@@ -1,0 +1,4 @@
+./node_modules
+
+~/hackthon-usecase/microservices/patient-service/node_modules
+~/hackthon-usecase/microservices/appointment-service/node_modules
