@@ -93,8 +93,6 @@ Before deploying the Healthcare Application, ensure you have the following:
 
 ### Monitoring and Logging
 - **CloudWatch Log Groups**: Application and container logs
-- **CloudWatch Dashboards**: Service metrics visualization
-- **CloudWatch Alarms**: CPU utilization monitoring
 - **Container Insights**: ECS cluster monitoring
 
 
