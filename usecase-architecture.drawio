@@ -212,7 +212,7 @@
           <mxGeometry x="20" y="290" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="B6YLdzFrlatJZyaLc0QG-56" value="ECR" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="B6YLdzFrlatJZyaLc0QG-2" vertex="1">
-          <mxGeometry x="630" y="267.58" width="60" height="30" as="geometry" />
+          <mxGeometry x="700" y="370" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0V448rpDX5ILRWhxnARz-5" value="Amazon S3" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.s3;" vertex="1" parent="B6YLdzFrlatJZyaLc0QG-2">
           <mxGeometry x="647" width="80" height="100" as="geometry" />
