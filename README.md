@@ -1,5 +1,6 @@
 # hackthon-usecase
 
+# Deploy the containerized microservices using AWS ECS Fargate, container orchestration, serverless computing, and AWS services.
 
 ### Target Technology Stack 
 
