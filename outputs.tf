@@ -28,7 +28,3 @@ output "ecs_cluster_name" {
   value       = module.ecs.cluster_name
 }
 
-output "cloudwatch_log_group_names" {
-  description = "Names of CloudWatch log groups"
-  value       = module.cloudwatch.log_group_names
-}

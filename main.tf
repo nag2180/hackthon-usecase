@@ -50,10 +50,3 @@ module "ecs" {
   desired_capacity       = var.desired_capacity
 }
 
-module "cloudwatch" {
-  source = "./modules/cloudwatch"
-  
-  project_name    = var.project_name
-  environment     = var.environment
-  ecs_cluster_name = module.ecs.cluster_name
-}
