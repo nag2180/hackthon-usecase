@@ -11,9 +11,6 @@ on:
         options:
           - destroy
 
-permissions:
-  id-token: write
-  contents: read
 
 
 jobs:
