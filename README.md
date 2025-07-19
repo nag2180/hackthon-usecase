@@ -5,21 +5,21 @@
 
 ```
 
-Component                   Technology 
+Component                           Technology 
 
 Infrastructure               Terraform 
 
-Load Balancer           AWS Application Load Balancer (ALB) 
+Load Balancer                AWS Application Load Balancer (ALB) 
 
-Container deployments   ECS with Fargate
+Container deployments        ECS with Fargate
 
-Container registry       ECR
+Container registry           ECR
 
-VPC Networking          AWS VPC/Subnets/RTs 
+VPC Networking               AWS VPC/Subnets/RTs 
 
-Monitoring              Cloudwatch
+Monitoring                   Cloudwatch
 
-CI/CD                   GitHub Actions 
+CI/CD                        GitHub Actions 
 
 State Management              S3 
 
